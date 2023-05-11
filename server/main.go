@@ -16,6 +16,7 @@ func main() {
 
 	r := mux.NewRouter()
 	routes.ActivityRouter(r)
+	routes.TodoRouter(r)
 
 	log.Println("Server Running On Port:", config.ENV.PORT)
 	http.ListenAndServe(fmt.Sprintf(":%v", config.ENV.PORT), r)
